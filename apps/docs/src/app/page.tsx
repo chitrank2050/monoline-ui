@@ -1,7 +1,7 @@
 import {
-	accentThemes,
 	foundationGroups,
 	spacingScale,
+	themeModes,
 	typographyScale,
 } from "@chitrank2050/foundry-tokens"
 import {
@@ -22,7 +22,7 @@ import {
 	Sparkles,
 } from "lucide-react"
 
-import { AccentSwitcher } from "../components/accent-switcher"
+import { PaletteSwitcher } from "../components/palette-switcher"
 import { ThemeToggle } from "../components/theme-toggle"
 
 const pillars = [
@@ -97,13 +97,13 @@ export default function HomePage() {
 							</div>
 							<div className="panel space-y-4 p-5">
 								<div className="flex items-center justify-between">
-									<p className="label-eyebrow">Accent</p>
+									<p className="label-eyebrow">Palette</p>
 									<Palette className="text-muted-foreground size-4" />
 								</div>
-								<AccentSwitcher />
+								<PaletteSwitcher />
 								<p className="text-muted-foreground text-sm leading-6">
-									Each accent shifts the brand expression while preserving the
-									same scale and component rules.
+									Switch between shadcn-friendly neutral families without
+									changing the component structure.
 								</p>
 							</div>
 							<div className="panel p-5 sm:col-span-2">
@@ -154,13 +154,13 @@ export default function HomePage() {
 				<div className="grid gap-6">
 					<Card className="rounded-[2rem]">
 						<CardHeader>
-							<CardTitle>Accent palettes</CardTitle>
+							<CardTitle>Theme modes</CardTitle>
 							<CardDescription>
-								These are starter color personalities for the system showcase.
+								Neutral-first palettes inspired by Tailwind and shadcn naming.
 							</CardDescription>
 						</CardHeader>
-						<CardContent className="grid gap-4 md:grid-cols-3">
-							{accentThemes.map((theme) => (
+						<CardContent className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+							{themeModes.map((theme) => (
 								<div
 									key={theme.id}
 									className="bg-muted/50 rounded-2xl border p-4"

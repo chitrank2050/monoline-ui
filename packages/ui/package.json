@@ -28,8 +28,12 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"sideEffects": [
+		"./src/styles/theme.css"
+	],
 	"exports": {
-		".": "./src/index.ts"
+		".": "./src/index.ts",
+		"./theme.css": "./src/styles/theme.css"
 	},
 	"scripts": {
 		"build": "tsc -p tsconfig.json --emitDeclarationOnly",

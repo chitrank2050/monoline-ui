@@ -1,24 +1,31 @@
-export const accentThemes = [
+export const themeModes = [
 	{
-		id: "copper",
-		label: "Copper",
+		id: "neutral",
+		label: "Neutral",
 		description:
-			"Warm and editorial. Great for portfolio storytelling and premium product surfaces.",
-		swatches: ["#b86f52", "#dd9b7c", "#f3d7ca"],
+			"The most shadcn-like baseline. Balanced, quiet, and a strong default for product UI.",
+		swatches: ["#18181b", "#71717a", "#f4f4f5"],
 	},
 	{
-		id: "ocean",
-		label: "Ocean",
+		id: "zinc",
+		label: "Zinc",
 		description:
-			"Cool and technical. Useful for dashboards, SaaS products, and modern interfaces.",
-		swatches: ["#0f7ea8", "#6bc2de", "#d6f1f8"],
+			"A slightly cooler neutral with a crisp product feel that still stays understated.",
+		swatches: ["#27272a", "#71717a", "#fafafa"],
 	},
 	{
-		id: "moss",
-		label: "Moss",
+		id: "stone",
+		label: "Stone",
 		description:
-			"Grounded and calm. A softer direction for thoughtful, systems-heavy experiences.",
-		swatches: ["#5f7f57", "#9ec59a", "#e0eedf"],
+			"A warmer neutral that feels a bit more editorial without drifting into a brand color.",
+		swatches: ["#292524", "#78716c", "#fafaf9"],
+	},
+	{
+		id: "slate",
+		label: "Slate",
+		description:
+			"A more technical neutral, useful when you want the interface to feel sharper and cooler.",
+		swatches: ["#0f172a", "#64748b", "#f8fafc"],
 	},
 ] as const
 
@@ -28,7 +35,7 @@ export const foundationGroups = [
 		items: [
 			"Semantic variables for surface, content, borders, states, and accents.",
 			"Light and dark modes share the same system vocabulary.",
-			"Accent palettes can change brand mood without rewriting components.",
+			"Palette modes can shift the whole UI character without rewriting components.",
 		],
 	},
 	{
