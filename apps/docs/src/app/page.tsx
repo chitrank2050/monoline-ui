@@ -362,6 +362,84 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
+
+			<section className="shell mt-8 grid gap-6 lg:grid-cols-[1fr_0.95fr]">
+				<Card className="rounded-[2rem]">
+					<CardHeader>
+						<CardTitle>Install Monoline UI</CardTitle>
+						<CardDescription>
+							The public package is designed to drop into Next.js and Vite
+							projects with the same CSS entrypoint.
+						</CardDescription>
+					</CardHeader>
+					<CardContent className="space-y-4">
+						<div className="bg-muted/50 rounded-[1.5rem] border p-4">
+							<p className="label-eyebrow mb-3">Add the package</p>
+							<pre className="bg-background overflow-x-auto rounded-xl border px-4 py-3 text-sm">
+								<code>{`pnpm add @chitrank2050/monoline-ui`}</code>
+							</pre>
+						</div>
+						<div className="bg-muted/50 rounded-[1.5rem] border p-4">
+							<p className="label-eyebrow mb-3">Import the theme once</p>
+							<pre className="bg-background overflow-x-auto rounded-xl border px-4 py-3 text-sm">
+								<code>{`import "@chitrank2050/monoline-ui/theme.css"`}</code>
+							</pre>
+						</div>
+						<div className="bg-muted/50 rounded-[1.5rem] border p-4">
+							<p className="label-eyebrow mb-3">Use components</p>
+							<pre className="bg-background overflow-x-auto rounded-xl border px-4 py-3 text-sm">
+								<code>{`import { Button, SectionHeader } from "@chitrank2050/monoline-ui"
+
+export function Hero() {
+	return (
+		<section>
+			<SectionHeader
+				eyebrow="System"
+				title="Consistent interface building blocks"
+				description="Ship polished sections faster with a shared visual language."
+			/>
+			<Button>Explore components</Button>
+		</section>
+	)
+}`}</code>
+							</pre>
+						</div>
+					</CardContent>
+				</Card>
+
+				<Card className="rounded-[2rem]">
+					<CardHeader>
+						<CardTitle>Package strategy</CardTitle>
+						<CardDescription>
+							A simple public install path, with the rest of the workspace
+							optimized for authoring and docs.
+						</CardDescription>
+					</CardHeader>
+					<CardContent className="space-y-4">
+						<StatCard
+							label="Public Package"
+							value="@chitrank2050/monoline-ui"
+							helper="Components and theme CSS ship together so consumers only need one install."
+						/>
+						<div className="grid gap-3">
+							<div className="bg-muted/50 rounded-[1.5rem] border p-4">
+								<p className="font-medium">Works with Next.js and Vite</p>
+								<p className="text-muted-foreground mt-2 text-sm leading-6">
+									The public entrypoint is framework-friendly and keeps the
+									setup close to how Tailwind and shadcn users already think.
+								</p>
+							</div>
+							<div className="bg-muted/50 rounded-[1.5rem] border p-4">
+								<p className="font-medium">Docs stay private</p>
+								<p className="text-muted-foreground mt-2 text-sm leading-6">
+									The docs app and internal tokens workspace can evolve freely
+									without complicating the consumer-facing npm package.
+								</p>
+							</div>
+						</div>
+					</CardContent>
+				</Card>
+			</section>
 		</main>
 	)
 }
