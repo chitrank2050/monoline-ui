@@ -15,6 +15,7 @@
 	"bugs": {
 		"url": "https://github.com/chitrank2050/monoline-ui/issues"
 	},
+	"type": "module",
 	"keywords": [
 		"react",
 		"component-library",
@@ -28,27 +29,41 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"sideEffects": [
-		"./src/styles/theme.css"
+		"./dist/styles/theme.css"
 	],
 	"exports": {
-		".": "./src/index.ts",
-		"./theme.css": "./src/styles/theme.css"
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./theme.css": "./dist/styles/theme.css",
+		"./package.json": "./package.json"
 	},
 	"scripts": {
-		"build": "tsc -p tsconfig.json --emitDeclarationOnly",
+		"build": "rm -rf dist && tsc -p tsconfig.build.json && mkdir -p dist/styles && cp src/styles/theme.css dist/styles/theme.css",
 		"biome-lint": "biome check .",
 		"biome-lint:fix": "biome check --write .",
 		"biome-format": "biome format --write .",
+		"prepack": "pnpm build",
 		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0 || ^19.0.0",
+		"react-dom": "^18.2.0 || ^19.0.0"
 	},
 	"dependencies": {
 		"@radix-ui/react-slot": "^1.2.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"lucide-react": "^0.511.0",
-		"react": "^19.2.0",
-		"react-dom": "^19.2.0",
 		"tailwind-merge": "^3.3.1"
 	}
 }

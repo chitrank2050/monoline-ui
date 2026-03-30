@@ -91,3 +91,18 @@ If you want Storybook publicly deployed later, create a second Vercel project wi
 - Root Directory: repository root
 - Build Command: `pnpm storybook:build`
 - Output Directory: `storybook-static`
+
+## Release workflow
+
+Monoline UI uses Changesets for versioning and GitHub Actions for publishing.
+
+Release flow:
+
+1. Create a changeset with `pnpm changeset`
+2. Merge the changeset to `main`
+3. GitHub Actions opens or updates a release PR
+4. Merging that release PR publishes `@chitrank2050/monoline-ui` to npm
+
+Required GitHub secret:
+
+- `NPM_TOKEN`: npm automation token with access to publish `@chitrank2050/monoline-ui`
