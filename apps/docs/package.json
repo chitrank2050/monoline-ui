@@ -1,7 +1,28 @@
 {
-	"name": "@foundry/docs",
+	"name": "@chitrank2050/foundry-docs",
 	"version": "0.1.0",
+	"description": "Private documentation and showcase app for the Foundry UI design system.",
 	"private": true,
+	"author": {
+		"name": "Chitrank Agnihotri",
+		"email": "chitrank2050@gmail.com",
+		"url": "https://www.chitrankagnihotri.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chitrank2050/foundry-ui"
+	},
+	"bugs": {
+		"url": "https://github.com/chitrank2050/foundry-ui/issues"
+	},
+	"keywords": [
+		"design-system-docs",
+		"nextjs",
+		"storybook",
+		"tailwindcss",
+		"react",
+		"private-workspace"
+	],
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -12,8 +33,8 @@
 		"test": "vitest run --passWithNoTests"
 	},
 	"dependencies": {
-		"@foundry/tokens": "workspace:*",
-		"@foundry/ui": "workspace:*",
+		"@chitrank2050/foundry-tokens": "workspace:*",
+		"@chitrank2050/foundry-ui": "workspace:*",
 		"clsx": "^2.1.1",
 		"lucide-react": "^0.511.0",
 		"next": "^16.1.6",

@@ -16,10 +16,10 @@
 		"incremental": true,
 		"baseUrl": ".",
 		"paths": {
-			"@foundry/ui": ["packages/ui/src/index.ts"],
-			"@foundry/ui/*": ["packages/ui/src/*"],
-			"@foundry/tokens": ["packages/tokens/src/index.ts"],
-			"@foundry/tokens/*": ["packages/tokens/src/*"]
+			"@chitrank2050/foundry-ui": ["packages/ui/src/index.ts"],
+			"@chitrank2050/foundry-ui/*": ["packages/ui/src/*"],
+			"@chitrank2050/foundry-tokens": ["packages/tokens/src/index.ts"],
+			"@chitrank2050/foundry-tokens/*": ["packages/tokens/src/*"]
 		}
 	}
 }

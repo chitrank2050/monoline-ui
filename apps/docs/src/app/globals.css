@@ -2,7 +2,7 @@
 @source "../../../../packages/ui/src";
 @source "../components";
 @source "../app";
-@import "@foundry/tokens/theme.css";
+@import "@chitrank2050/foundry-tokens/theme.css";
 
 @layer base {
 	* {

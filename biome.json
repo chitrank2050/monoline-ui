@@ -4,6 +4,7 @@
 		"includes": [
 			"**",
 			"!**/*.css",
+			"!**/next-env.d.ts",
 			"!**/node_modules",
 			"!**/.next",
 			"!**/.turbo",

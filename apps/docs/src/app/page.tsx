@@ -3,7 +3,7 @@ import {
 	foundationGroups,
 	spacingScale,
 	typographyScale,
-} from "@foundry/tokens"
+} from "@chitrank2050/foundry-tokens"
 import {
 	Badge,
 	Button,
@@ -13,7 +13,7 @@ import {
 	CardHeader,
 	CardTitle,
 	Input,
-} from "@foundry/ui"
+} from "@chitrank2050/foundry-ui"
 import {
 	ArrowUpRight,
 	Layers3,

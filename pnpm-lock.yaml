@@ -98,10 +98,10 @@ importers:
 
   apps/docs:
     dependencies:
-      '@foundry/tokens':
+      '@chitrank2050/foundry-tokens':
         specifier: workspace:*
         version: link:../../packages/tokens
-      '@foundry/ui':
+      '@chitrank2050/foundry-ui':
         specifier: workspace:*
         version: link:../../packages/ui
       clsx:

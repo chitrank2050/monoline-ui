@@ -1,7 +1,7 @@
 "use client"
 
-import { accentThemes } from "@foundry/tokens"
-import { Button, cn } from "@foundry/ui"
+import { accentThemes } from "@chitrank2050/foundry-tokens"
+import { Button, cn } from "@chitrank2050/foundry-ui"
 import { useEffect, useState } from "react"
 
 const storageKey = "foundry-accent"
