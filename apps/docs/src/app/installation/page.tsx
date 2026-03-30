@@ -1,10 +1,4 @@
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@chitrank2050/monoline-ui"
+import { Card } from "@chitrank2050/monoline-ui"
 
 import { CommandTabs } from "../../components/command-tabs"
 import { DocsShell } from "../../components/docs-shell"
@@ -29,33 +23,33 @@ export default function InstallationPage() {
 
 			<section id="css" className="docs-section">
 				<Card className="rounded-[1.75rem]">
-					<CardHeader>
-						<CardTitle>Theme CSS</CardTitle>
-						<CardDescription>
+					<Card.Header>
+						<Card.Title>Theme CSS</Card.Title>
+						<Card.Description>
 							Import the shared CSS entrypoint once.
-						</CardDescription>
-					</CardHeader>
-					<CardContent>
+						</Card.Description>
+					</Card.Header>
+					<Card.Content>
 						<pre className="docs-code">
 							<code>{`import "@chitrank2050/monoline-ui/theme.css"`}</code>
 						</pre>
-					</CardContent>
+					</Card.Content>
 				</Card>
 			</section>
 
 			<section id="usage" className="docs-section">
 				<Card className="rounded-[1.75rem]">
-					<CardHeader>
-						<CardTitle>Usage</CardTitle>
-						<CardDescription>
+					<Card.Header>
+						<Card.Title>Usage</Card.Title>
+						<Card.Description>
 							Import the pieces you need from the package.
-						</CardDescription>
-					</CardHeader>
-					<CardContent>
+						</Card.Description>
+					</Card.Header>
+					<Card.Content>
 						<pre className="docs-code">
 							<code>{`import { Button, Card, Navbar } from "@chitrank2050/monoline-ui"`}</code>
 						</pre>
-					</CardContent>
+					</Card.Content>
 				</Card>
 			</section>
 		</DocsShell>

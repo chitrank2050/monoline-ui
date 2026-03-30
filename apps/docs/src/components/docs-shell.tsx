@@ -49,9 +49,9 @@ export function DocsShell({
 
 			<div className="shell py-6 sm:py-8">
 				<div className="grid gap-8 xl:grid-cols-[240px_minmax(0,1fr)_220px]">
-					<aside className="hidden xl:sticky xl:top-24 xl:block xl:self-start">
-						<div className="panel p-5">
-							<div className="mb-5 space-y-3 border-b pb-5">
+					<aside className="hidden xl:sticky xl:top-24 xl:block xl:self-start xl:max-h-[calc(100vh-7rem)]">
+						<div className="panel relative flex max-h-[calc(100vh-7rem)] flex-col overflow-hidden p-5">
+							<div className="mb-5 shrink-0 space-y-3 border-b pb-5">
 								<Badge variant="outline" className="rounded-full font-mono">
 									Docs
 								</Badge>
@@ -60,7 +60,10 @@ export function DocsShell({
 									system.
 								</p>
 							</div>
-							<DocsSidebar />
+							<div className="sidebar-scroll flex-1 overflow-y-auto">
+								<DocsSidebar />
+							</div>
+							<div className="sidebar-fade pointer-events-none absolute inset-x-0 bottom-0 h-12 rounded-b-3xl" />
 						</div>
 					</aside>
 

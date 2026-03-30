@@ -53,4 +53,16 @@
 	.docs-preview {
 		@apply bg-background rounded-[1.5rem] border border-border/80 p-6;
 	}
+
+	.sidebar-fade {
+		background: linear-gradient(to bottom, transparent, var(--card));
+	}
+
+	.sidebar-scroll {
+		scrollbar-width: none;
+	}
+
+	.sidebar-scroll::-webkit-scrollbar {
+		display: none;
+	}
 }

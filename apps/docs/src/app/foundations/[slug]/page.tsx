@@ -3,13 +3,7 @@ import {
 	themeModes,
 	typographyScale,
 } from "@chitrank2050/monoline-tokens"
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@chitrank2050/monoline-ui"
+import { Card } from "@chitrank2050/monoline-ui"
 import { notFound } from "next/navigation"
 
 import { DocsShell } from "../../../components/docs-shell"
@@ -109,11 +103,11 @@ export default async function FoundationsPage({
 						<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
 							{themeModes.map((theme) => (
 								<Card key={theme.id} className="rounded-[1.75rem]">
-									<CardHeader>
-										<CardTitle>{theme.label}</CardTitle>
-										<CardDescription>{theme.description}</CardDescription>
-									</CardHeader>
-									<CardContent>
+									<Card.Header>
+										<Card.Title>{theme.label}</Card.Title>
+										<Card.Description>{theme.description}</Card.Description>
+									</Card.Header>
+									<Card.Content>
 										<div className="flex gap-2">
 											{theme.swatches.map((swatch) => (
 												<div
@@ -123,7 +117,7 @@ export default async function FoundationsPage({
 												/>
 											))}
 										</div>
-									</CardContent>
+									</Card.Content>
 								</Card>
 							))}
 						</div>
@@ -162,13 +156,13 @@ export default async function FoundationsPage({
 								},
 							].map((font) => (
 								<Card key={font.label} className="rounded-[1.75rem]">
-									<CardHeader>
-										<CardTitle>{font.label}</CardTitle>
-										<CardDescription>{font.variable}</CardDescription>
-									</CardHeader>
-									<CardContent>
+									<Card.Header>
+										<Card.Title>{font.label}</Card.Title>
+										<Card.Description>{font.variable}</Card.Description>
+									</Card.Header>
+									<Card.Content>
 										<p className={font.className}>{font.copy}</p>
-									</CardContent>
+									</Card.Content>
 								</Card>
 							))}
 						</div>
@@ -176,7 +170,7 @@ export default async function FoundationsPage({
 
 					<section id="scale" className="docs-section">
 						<Card className="rounded-[1.75rem]">
-							<CardContent className="space-y-4 pt-6">
+							<Card.Content className="space-y-4 pt-6">
 								{typographyScale.map((item) => (
 									<div
 										key={item.label}
@@ -188,7 +182,7 @@ export default async function FoundationsPage({
 										</p>
 									</div>
 								))}
-							</CardContent>
+							</Card.Content>
 						</Card>
 					</section>
 				</>
@@ -198,7 +192,7 @@ export default async function FoundationsPage({
 				<>
 					<section id="scale" className="docs-section">
 						<Card className="rounded-[1.75rem]">
-							<CardContent className="space-y-4 pt-6">
+							<Card.Content className="space-y-4 pt-6">
 								{spacingScale.map((item) => (
 									<div key={item.token} className="flex items-center gap-4">
 										<code className="text-muted-foreground w-10 font-mono text-xs">
@@ -213,7 +207,7 @@ export default async function FoundationsPage({
 										</span>
 									</div>
 								))}
-							</CardContent>
+							</Card.Content>
 						</Card>
 					</section>
 

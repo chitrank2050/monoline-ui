@@ -3,12 +3,6 @@ import {
 	BentoPanel,
 	Button,
 	Card,
-	CardContent,
-	CardDescription,
-	CardEyebrow,
-	CardFooter,
-	CardHeader,
-	CardTitle,
 	Footer,
 	Input,
 	Navbar,
@@ -48,11 +42,11 @@ const componentPages = {
 		description:
 			"A generic content surface that changes through variants instead of domain-specific names.",
 		usage: `<Card variant="tertiary">
-  <CardHeader>
-    <CardEyebrow>Featured</CardEyebrow>
-    <CardTitle>Launch recap</CardTitle>
-    <CardDescription>One surface, different levels of emphasis.</CardDescription>
-  </CardHeader>
+  <Card.Header>
+    <Card.Eyebrow>Featured</Card.Eyebrow>
+    <Card.Title>Launch recap</Card.Title>
+    <Card.Description>One surface, different levels of emphasis.</Card.Description>
+  </Card.Header>
 </Card>`,
 	},
 	input: {
@@ -176,16 +170,16 @@ function renderApi(slug: keyof typeof componentPages) {
 					},
 				].map((item) => (
 					<Card key={item.label} variant={item.variant}>
-						<CardHeader>
-							<CardEyebrow>{item.label}</CardEyebrow>
-							<CardTitle>{item.label} Card</CardTitle>
-							<CardDescription>{item.copy}</CardDescription>
-						</CardHeader>
-						<CardFooter>
+						<Card.Header>
+							<Card.Eyebrow>{item.label}</Card.Eyebrow>
+							<Card.Title>{item.label} Card</Card.Title>
+							<Card.Description>{item.copy}</Card.Description>
+						</Card.Header>
+						<Card.Footer>
 							<Button size="sm" variant="ghost">
 								Inspect
 							</Button>
-						</CardFooter>
+						</Card.Footer>
 					</Card>
 				))}
 			</div>
@@ -317,44 +311,44 @@ function renderPreview(slug: keyof typeof componentPages) {
 		return (
 			<div className="grid gap-4 xl:grid-cols-[1.4fr_1fr]">
 				<Card variant="tertiary">
-					<CardHeader>
-						<CardEyebrow>Featured surface</CardEyebrow>
-						<CardTitle>One card, multiple use cases</CardTitle>
-						<CardDescription>
+					<Card.Header>
+						<Card.Eyebrow>Featured surface</Card.Eyebrow>
+						<Card.Title>One card, multiple use cases</Card.Title>
+						<Card.Description>
 							Use content, slots, and variants to express hero tiles, supporting
 							panels, or low-emphasis containers without introducing new
 							component names for every domain.
-						</CardDescription>
-					</CardHeader>
-					<CardContent>
+						</Card.Description>
+					</Card.Header>
+					<Card.Content>
 						<div className="grid gap-3 sm:grid-cols-2">
 							<StatusBadge label="UI system active" />
 							<StatusBadge label="Release candidate" status="warning" />
 						</div>
-					</CardContent>
-					<CardFooter>
+					</Card.Content>
+					<Card.Footer>
 						<Button>Read docs</Button>
 						<Button variant="ghost">View tokens</Button>
-					</CardFooter>
+					</Card.Footer>
 				</Card>
 				<div className="grid gap-4">
 					<Card variant="secondary">
-						<CardHeader>
-							<CardEyebrow>Metric</CardEyebrow>
-							<CardTitle>84%</CardTitle>
-							<CardDescription>
+						<Card.Header>
+							<Card.Eyebrow>Metric</Card.Eyebrow>
+							<Card.Title>84%</Card.Title>
+							<Card.Description>
 								Design coverage across current pages.
-							</CardDescription>
-						</CardHeader>
+							</Card.Description>
+						</Card.Header>
 					</Card>
 					<Card variant="ghost">
-						<CardHeader>
-							<CardEyebrow>Note</CardEyebrow>
-							<CardTitle>Low-chrome grouping</CardTitle>
-							<CardDescription>
+						<Card.Header>
+							<Card.Eyebrow>Note</Card.Eyebrow>
+							<Card.Title>Low-chrome grouping</Card.Title>
+							<Card.Description>
 								Ghost cards help group content inside already elevated sections.
-							</CardDescription>
-						</CardHeader>
+							</Card.Description>
+						</Card.Header>
 					</Card>
 				</div>
 			</div>
@@ -387,19 +381,19 @@ function renderPreview(slug: keyof typeof componentPages) {
 	if (slug === "status-badge") {
 		return (
 			<Card variant="secondary">
-				<CardHeader>
-					<CardEyebrow>Runtime state</CardEyebrow>
-					<CardTitle>Lightweight status language</CardTitle>
-					<CardDescription>
+				<Card.Header>
+					<Card.Eyebrow>Runtime state</Card.Eyebrow>
+					<Card.Title>Lightweight status language</Card.Title>
+					<Card.Description>
 						Use the same component for availability, background jobs, or
 						editorial flags instead of inventing one-off chips for each screen.
-					</CardDescription>
-				</CardHeader>
-				<CardContent className="flex flex-wrap gap-3">
+					</Card.Description>
+				</Card.Header>
+				<Card.Content className="flex flex-wrap gap-3">
 					<StatusBadge label="Accepting work" />
 					<StatusBadge label="In review" status="warning" />
 					<StatusBadge label="Paused" status="neutral" />
-				</CardContent>
+				</Card.Content>
 			</Card>
 		)
 	}

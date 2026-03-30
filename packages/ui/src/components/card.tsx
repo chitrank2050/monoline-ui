@@ -101,13 +101,22 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 	)
 }
 
+const CardNamespace = Object.assign(Card, {
+	Header: CardHeader,
+	Eyebrow: CardEyebrow,
+	Title: CardTitle,
+	Description: CardDescription,
+	Content: CardContent,
+	Footer: CardFooter,
+})
+
 export {
-	Card,
 	CardContent,
 	CardDescription,
 	CardEyebrow,
 	CardFooter,
 	CardHeader,
+	CardNamespace as Card,
 	CardTitle,
 	cardVariants,
 }

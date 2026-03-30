@@ -1,11 +1,5 @@
 import { themeModes, typographyScale } from "@chitrank2050/monoline-tokens"
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@chitrank2050/monoline-ui"
+import { Card } from "@chitrank2050/monoline-ui"
 
 import { DocsShell } from "../../components/docs-shell"
 import { PaletteSwitcher } from "../../components/palette-switcher"
@@ -28,26 +22,26 @@ export default function ThemingPage() {
 			<section id="appearance" className="docs-section">
 				<div className="grid gap-4 lg:grid-cols-2">
 					<Card className="rounded-[1.75rem]">
-						<CardHeader>
-							<CardTitle>Appearance</CardTitle>
-							<CardDescription>
+						<Card.Header>
+							<Card.Title>Appearance</Card.Title>
+							<Card.Description>
 								Light and dark modes are first-class.
-							</CardDescription>
-						</CardHeader>
-						<CardContent>
+							</Card.Description>
+						</Card.Header>
+						<Card.Content>
 							<ThemeToggle />
-						</CardContent>
+						</Card.Content>
 					</Card>
 					<Card className="rounded-[1.75rem]">
-						<CardHeader>
-							<CardTitle>Palette</CardTitle>
-							<CardDescription>
+						<Card.Header>
+							<Card.Title>Palette</Card.Title>
+							<Card.Description>
 								Switch the neutral family without changing component structure.
-							</CardDescription>
-						</CardHeader>
-						<CardContent>
+							</Card.Description>
+						</Card.Header>
+						<Card.Content>
 							<PaletteSwitcher />
-						</CardContent>
+						</Card.Content>
 					</Card>
 				</div>
 			</section>
@@ -56,11 +50,11 @@ export default function ThemingPage() {
 				<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
 					{themeModes.map((theme) => (
 						<Card key={theme.id} className="rounded-[1.75rem]">
-							<CardHeader>
-								<CardTitle>{theme.label}</CardTitle>
-								<CardDescription>{theme.description}</CardDescription>
-							</CardHeader>
-							<CardContent>
+							<Card.Header>
+								<Card.Title>{theme.label}</Card.Title>
+								<Card.Description>{theme.description}</Card.Description>
+							</Card.Header>
+							<Card.Content>
 								<div className="flex gap-2">
 									{theme.swatches.map((swatch) => (
 										<div
@@ -70,7 +64,7 @@ export default function ThemingPage() {
 										/>
 									))}
 								</div>
-							</CardContent>
+							</Card.Content>
 						</Card>
 					))}
 				</div>
@@ -106,19 +100,19 @@ export default function ThemingPage() {
 							},
 						].map((font) => (
 							<Card key={font.label} className="rounded-[1.75rem]">
-								<CardHeader>
-									<CardTitle>{font.label}</CardTitle>
-									<CardDescription>{font.variable}</CardDescription>
-								</CardHeader>
-								<CardContent>
+								<Card.Header>
+									<Card.Title>{font.label}</Card.Title>
+									<Card.Description>{font.variable}</Card.Description>
+								</Card.Header>
+								<Card.Content>
 									<p className={font.className}>{font.preview}</p>
-								</CardContent>
+								</Card.Content>
 							</Card>
 						))}
 					</div>
 
 					<Card className="rounded-[1.75rem]">
-						<CardContent className="space-y-4 pt-6">
+						<Card.Content className="space-y-4 pt-6">
 							{typographyScale.map((item) => (
 								<div
 									key={item.label}
@@ -130,7 +124,7 @@ export default function ThemingPage() {
 									</p>
 								</div>
 							))}
-						</CardContent>
+						</Card.Content>
 					</Card>
 				</div>
 			</section>
