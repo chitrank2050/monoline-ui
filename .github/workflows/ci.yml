@@ -52,4 +52,4 @@ jobs:
         run: pnpm install --frozen-lockfile=false
 
       - name: Check formatting
-        run: pnpm fortmat
+        run: pnpm format
