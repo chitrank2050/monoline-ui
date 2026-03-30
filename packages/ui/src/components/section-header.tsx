@@ -35,7 +35,7 @@ function SectionHeader({
 					</p>
 				) : null}
 				<div className="space-y-2">
-					<h2 className="font-mono text-2xl font-semibold tracking-tight sm:text-3xl">
+					<h2 className="font-headline text-2xl font-semibold tracking-tight sm:text-3xl">
 						{title}
 					</h2>
 					{description ? (

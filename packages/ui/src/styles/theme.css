@@ -1,7 +1,7 @@
 :root {
-	--font-sans: "Inter", sans-serif;
-	--font-mono: "IBM Plex Mono", monospace;
-	--font-script: "Caveat", cursive;
+	--font-sans: var(--font-inter-sans, "Inter"), sans-serif;
+	--font-mono: var(--font-plex-mono, "IBM Plex Mono"), monospace;
+	--font-script: var(--font-caveat-script, "Caveat"), cursive;
 	--radius: 1.25rem;
 	--shadow-soft: 0 16px 44px -24px color-mix(in oklab, black 28%, transparent);
 	--shadow-strong: 0 28px 80px -32px color-mix(in oklab, black 38%, transparent);
@@ -238,4 +238,8 @@
 
 .font-script {
 	font-family: var(--font-script);
+}
+
+.font-headline {
+	font-family: var(--font-headline, "Manrope"), sans-serif;
 }

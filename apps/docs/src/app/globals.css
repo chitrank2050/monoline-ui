@@ -49,4 +49,8 @@
 	.docs-code {
 		@apply bg-muted/60 text-foreground overflow-x-auto rounded-[1.25rem] border p-4 font-mono text-sm leading-6;
 	}
+
+	.docs-preview {
+		@apply bg-background rounded-[1.5rem] border border-border/80 p-6;
+	}
 }

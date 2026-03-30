@@ -41,7 +41,7 @@ function BentoPanel({
 							{eyebrow}
 						</p>
 					) : null}
-					<h3 className="font-mono text-xl font-semibold tracking-tight">
+					<h3 className="font-headline text-xl font-semibold tracking-tight">
 						{title}
 					</h3>
 					<p className="text-muted-foreground text-sm leading-6">

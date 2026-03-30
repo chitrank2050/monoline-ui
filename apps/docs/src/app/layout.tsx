@@ -1,6 +1,6 @@
 import { cn } from "@chitrank2050/monoline-ui"
 import type { Metadata } from "next"
-import { Caveat, IBM_Plex_Mono, Inter } from "next/font/google"
+import { Caveat, IBM_Plex_Mono, Inter, Manrope } from "next/font/google"
 
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/next"
@@ -8,22 +8,42 @@ import { ThemeProvider } from "../components/theme-provider"
 import { siteConfig } from "../lib/site"
 
 const inter = Inter({
+	preload: true,
 	subsets: ["latin"],
-	variable: "--font-sans",
 	display: "swap",
+	adjustFontFallback: true,
+	fallback: ["sans-serif"],
+	variable: "--font-inter-sans",
+})
+
+const manrope = Manrope({
+	preload: true,
+	subsets: ["latin"],
+	weight: ["700"],
+	display: "swap",
+	adjustFontFallback: true,
+	fallback: ["sans-serif"],
+	variable: "--font-headline",
 })
 
 const plexMono = IBM_Plex_Mono({
+	preload: true,
 	subsets: ["latin"],
-	weight: ["400", "500", "600"],
-	variable: "--font-mono",
+	weight: ["400", "600", "700"],
+	style: ["normal"],
 	display: "swap",
+	adjustFontFallback: true,
+	fallback: ["monospace"],
+	variable: "--font-plex-mono",
 })
 
 const caveat = Caveat({
+	preload: true,
 	subsets: ["latin"],
-	variable: "--font-script",
 	display: "swap",
+	adjustFontFallback: true,
+	fallback: ["cursive"],
+	variable: "--font-caveat-script",
 })
 
 export const metadata: Metadata = {
@@ -55,7 +75,12 @@ export default function RootLayout({
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={cn(inter.variable, plexMono.variable, caveat.variable)}
+			className={cn(
+				inter.variable,
+				manrope.variable,
+				plexMono.variable,
+				caveat.variable
+			)}
 		>
 			<body className="font-sans">
 				<ThemeProvider>{children}</ThemeProvider>
