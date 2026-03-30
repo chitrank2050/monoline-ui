@@ -29,3 +29,32 @@ Run Storybook with:
 ```bash
 pnpm storybook
 ```
+
+## Vercel deploy
+
+Deploy the docs app as the first Vercel project in this monorepo.
+
+Recommended Vercel project settings:
+
+- Root Directory: `apps/docs`
+- Framework Preset: `Next.js`
+- Install Command: `pnpm install`
+- Build Command: `pnpm --filter @chitrank2050/foundry-docs build`
+
+Environment variables:
+
+- `NEXT_PUBLIC_SITE_URL=https://your-production-domain`
+
+Notes:
+
+- `@chitrank2050/foundry-ui` is the public npm package.
+- `apps/docs` stays private and acts as the public showcase site.
+- `packages/tokens` stays internal for now and is consumed by the docs app and UI package workspace.
+
+### Storybook later
+
+If you want Storybook publicly deployed later, create a second Vercel project with:
+
+- Root Directory: repository root
+- Build Command: `pnpm storybook:build`
+- Output Directory: `storybook-static`

@@ -4,6 +4,7 @@ import { Caveat, IBM_Plex_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "../components/theme-provider"
+import { siteConfig } from "../lib/site"
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -25,9 +26,21 @@ const caveat = Caveat({
 })
 
 export const metadata: Metadata = {
-	title: "Foundry UI",
-	description:
-		"A modular design system and UI blueprint built from Chitrank's portfolio language.",
+	metadataBase: new URL(siteConfig.url),
+	title: siteConfig.name,
+	description: siteConfig.description,
+	openGraph: {
+		title: siteConfig.name,
+		description: siteConfig.description,
+		url: siteConfig.url,
+		siteName: siteConfig.name,
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: siteConfig.name,
+		description: siteConfig.description,
+	},
 }
 
 export default function RootLayout({
