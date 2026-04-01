@@ -10,10 +10,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/chitrank2050/monoline-ui"
+		"url": "https://github.com/chitranklabs/monoline-ui"
 	},
 	"bugs": {
-		"url": "https://github.com/chitrank2050/monoline-ui/issues"
+		"url": "https://github.com/chitranklabs/monoline-ui/issues"
 	},
 	"type": "module",
 	"keywords": [
@@ -67,7 +67,7 @@
 		"@radix-ui/react-slot": "^1.2.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"lucide-react": "^0.511.0",
-		"tailwind-merge": "^3.3.1"
+		"lucide-react": "^1.7.0",
+		"tailwind-merge": "^3.5.0"
 	}
 }
