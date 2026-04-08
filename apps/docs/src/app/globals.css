@@ -32,11 +32,11 @@
 	}
 
 	.label-eyebrow {
-		@apply text-muted-foreground font-mono text-xs uppercase tracking-[0.32em];
+		@apply text-foreground mb-1 rounded-md px-2 py-1 text-sm font-semibold;
 	}
 
 	.docs-nav-link {
-		@apply text-muted-foreground hover:text-foreground block px-0 py-1 text-sm transition-colors;
+		@apply text-muted-foreground hover:bg-accent hover:text-accent-foreground flex w-full items-center rounded-md border border-transparent px-2 py-1 text-sm font-medium transition-colors;
 	}
 
 	.docs-section {

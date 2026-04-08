@@ -19,8 +19,7 @@ const bentoGridVariants = cva("grid w-full gap-4", {
 })
 
 interface BentoGridProps
-	extends React.ComponentProps<"div">,
-		VariantProps<typeof bentoGridVariants> {
+	extends React.ComponentProps<"div">, VariantProps<typeof bentoGridVariants> {
 	autoRows?: string
 }
 

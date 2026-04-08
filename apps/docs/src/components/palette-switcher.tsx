@@ -8,7 +8,8 @@ import { useCallback, useState } from "react"
 function setAccentCookie(mode: string) {
 	const maxAge = 365 * 24 * 60 * 60
 	const value = `monoline-accent=${mode};path=/;max-age=${maxAge};samesite=lax`
-	// biome-ignore lint/suspicious/noDocumentCookie: Cookie Store API lacks broad support; document.cookie is the reliable cross-browser approach for setting cookies client-side.
+	// Cookie Store API lacks broad support, so document.cookie stays the most
+	// reliable cross-browser option for persisting the selected palette.
 	document.cookie = value
 }
 

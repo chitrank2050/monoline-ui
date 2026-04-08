@@ -9,15 +9,11 @@
 			"dependsOn": ["^build"],
 			"outputs": [".next/**", "dist/**"]
 		},
-		"biome-lint": {
-			"dependsOn": ["^biome-lint"],
+		"lint": {
+			"dependsOn": ["^lint"],
 			"outputs": []
 		},
-		"biome-lint:fix": {
-			"cache": false,
-			"outputs": []
-		},
-		"biome-format": {
+		"lint:fix": {
 			"cache": false,
 			"outputs": []
 		},

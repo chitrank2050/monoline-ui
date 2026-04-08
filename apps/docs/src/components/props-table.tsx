@@ -45,7 +45,7 @@ export function PropsTable({ props }: { props: readonly Prop[] }) {
 								{prop.default ? (
 									<code className="font-mono text-xs">{prop.default}</code>
 								) : (
-									<span className="text-xs">—</span>
+									<span className="text-xs">-</span>
 								)}
 							</td>
 							<td className="px-4 py-2.5 text-muted-foreground">

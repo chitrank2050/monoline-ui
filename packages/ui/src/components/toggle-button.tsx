@@ -7,8 +7,10 @@ export interface ToggleOption<T extends string> {
 	label: string
 }
 
-export interface ToggleButtonProps<T extends string>
-	extends Omit<React.ComponentProps<"div">, "onChange"> {
+export interface ToggleButtonProps<T extends string> extends Omit<
+	React.ComponentProps<"div">,
+	"onChange"
+> {
 	options: [ToggleOption<T>, ToggleOption<T>]
 	activeValue: T
 	onChange: (value: T) => void

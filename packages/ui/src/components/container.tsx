@@ -18,8 +18,7 @@ const containerVariants = cva("mx-auto w-full px-4 sm:px-6 lg:px-8", {
 })
 
 interface ContainerProps
-	extends React.ComponentProps<"div">,
-		VariantProps<typeof containerVariants> {}
+	extends React.ComponentProps<"div">, VariantProps<typeof containerVariants> {}
 
 function Container({ className, size, ...props }: ContainerProps) {
 	return (

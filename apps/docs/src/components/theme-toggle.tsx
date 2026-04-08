@@ -3,20 +3,44 @@
 import { Button, cn } from "@chitrank2050/monoline-ui"
 import { MoonStar, SunMedium } from "lucide-react"
 import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { Suspense, useCallback, useEffect, useState } from "react"
 
 const modes = [
 	{ id: "light", label: "Light", icon: SunMedium },
 	{ id: "dark", label: "Dark", icon: MoonStar },
 ] as const
 
-export function ThemeToggle() {
+function ThemeToggleContent() {
 	const { resolvedTheme, setTheme } = useTheme()
 	const [mounted, setMounted] = useState(false)
+	const router = useRouter()
+	const pathname = usePathname()
+	const searchParams = useSearchParams()
 
 	useEffect(() => {
 		setMounted(true)
 	}, [])
+
+	const updateTheme = useCallback(
+		(newTheme: string) => {
+			setTheme(newTheme)
+			const params = new URLSearchParams(searchParams.toString())
+			params.set("theme", newTheme)
+			router.replace(`${pathname}?${params.toString()}`, { scroll: false })
+		},
+		[pathname, router, searchParams, setTheme]
+	)
+
+	// Sync theme from query param on mount and when it changes
+	useEffect(() => {
+		const themeParam = searchParams.get("theme")
+		if (themeParam && (themeParam === "light" || themeParam === "dark")) {
+			if (themeParam !== resolvedTheme) {
+				setTheme(themeParam)
+			}
+		}
+	}, [searchParams, resolvedTheme, setTheme])
 
 	if (!mounted) {
 		return (
@@ -49,12 +73,27 @@ export function ThemeToggle() {
 						"rounded-full px-3",
 						resolvedTheme !== id && "text-muted-foreground"
 					)}
-					onClick={() => setTheme(id)}
+					onClick={() => updateTheme(id)}
 				>
 					<Icon className="size-4" />
 					{label}
 				</Button>
 			))}
 		</div>
+	)
+}
+
+export function ThemeToggle() {
+	return (
+		<Suspense
+			fallback={
+				<div className="bg-muted inline-flex rounded-full p-1">
+					<div className="h-9 w-20 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800" />
+					<div className="h-9 w-20 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800" />
+				</div>
+			}
+		>
+			<ThemeToggleContent />
+		</Suspense>
 	)
 }

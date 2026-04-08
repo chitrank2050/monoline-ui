@@ -32,9 +32,9 @@
 	},
 	"scripts": {
 		"build": "tsc -p tsconfig.json --emitDeclarationOnly",
-		"biome-lint": "biome check .",
-		"biome-lint:fix": "biome check --write .",
-		"biome-format": "biome format --write .",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
 		"test": "vitest run --passWithNoTests"
 	}
 }

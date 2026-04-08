@@ -81,6 +81,7 @@ export default async function RootLayout({
 			suppressHydrationWarning
 			data-accent={accent}
 			className={cn(
+				"h-full",
 				inter.variable,
 				manrope.variable,
 				plexMono.variable,
@@ -88,9 +89,27 @@ export default async function RootLayout({
 			)}
 		>
 			<head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								try {
+									const params = new URLSearchParams(window.location.search);
+									const theme = params.get('theme');
+									if (theme === 'dark' || theme === 'light') {
+										document.documentElement.classList.toggle('dark', theme === 'dark');
+										document.documentElement.classList.toggle('light', theme === 'light');
+										document.documentElement.style.colorScheme = theme;
+										localStorage.setItem('theme', theme);
+									}
+								} catch (e) {}
+							})()
+						`,
+					}}
+				/>
 				<Script src="/accent-init.js" strategy="beforeInteractive" />
 			</head>
-			<body className="font-sans">
+			<body className="font-sans h-full">
 				<ThemeProvider>{children}</ThemeProvider>
 				{isProduction && <Analytics />}
 			</body>

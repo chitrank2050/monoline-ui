@@ -14,6 +14,7 @@
 		"esModuleInterop": true,
 		"jsx": "preserve",
 		"incremental": true,
+		"ignoreDeprecations": "6.0",
 		"baseUrl": ".",
 		"paths": {
 			"@chitrank2050/monoline-ui": ["packages/ui/src/index.ts"],

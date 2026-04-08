@@ -71,7 +71,7 @@ const componentPages: Record<string, ComponentPage> = {
 				description: "The label content rendered inside the badge.",
 			},
 		],
-		a11y: "Badge renders as a <span> by default so it is purely presentational. When used to convey status, pair it with visually hidden text or an aria-label on the parent element so screen readers announce the meaning. Avoid using color alone to communicate state — combine with text labels.",
+		a11y: "Badge renders as a <span> by default so it is purely presentational. When used to convey status, pair it with visually hidden text or an aria-label on the parent element so screen readers announce the meaning. Avoid using color alone to communicate state - combine with text labels.",
 	},
 	button: {
 		title: "Button",
@@ -109,7 +109,7 @@ const componentPages: Record<string, ComponentPage> = {
 				description: "Disables the button and applies reduced opacity styling.",
 			},
 		],
-		a11y: "Button renders a native <button> element with full keyboard support — focusable via Tab, activated with Enter or Space. When using asChild to render a link, ensure the resulting element has the correct role. Use descriptive labels rather than generic text like 'Click here'. Disabled buttons remain in the focus order for discoverability.",
+		a11y: "Button renders a native <button> element with full keyboard support - focusable via Tab, activated with Enter or Space. When using asChild to render a link, ensure the resulting element has the correct role. Use descriptive labels rather than generic text like 'Click here'. Disabled buttons remain in the focus order for discoverability.",
 	},
 	card: {
 		title: "Card",
@@ -131,7 +131,7 @@ const componentPages: Record<string, ComponentPage> = {
 				type: '"primary" | "secondary" | "tertiary" | "ghost"',
 				default: '"primary"',
 				description:
-					"Controls the surface style — background color, border, and shadow intensity.",
+					"Controls the surface style - background color, border, and shadow intensity.",
 			},
 			{
 				name: "className",
@@ -139,7 +139,7 @@ const componentPages: Record<string, ComponentPage> = {
 				description: "Additional CSS classes merged onto the root element.",
 			},
 		],
-		a11y: "Card renders as a <div> with data-slot attributes on each sub-component for styling hooks. For interactive cards, wrap the card in an <a> or add a click handler with role='button' and tabIndex={0}. Card.Title renders as an <h3> by default — ensure it fits your heading hierarchy. Use Card.Description for supplementary text that provides context.",
+		a11y: "Card renders as a <div> with data-slot attributes on each sub-component for styling hooks. For interactive cards, wrap the card in an <a> or add a click handler with role='button' and tabIndex={0}. Card.Title renders as an <h3> by default - ensure it fits your heading hierarchy. Use Card.Description for supplementary text that provides context.",
 	},
 	input: {
 		title: "Input",
@@ -155,7 +155,7 @@ const componentPages: Record<string, ComponentPage> = {
 				type: "string",
 				default: '"text"',
 				description:
-					"Standard HTML input type — text, email, password, number, search, tel, url, etc.",
+					"Standard HTML input type - text, email, password, number, search, tel, url, etc.",
 			},
 			{
 				name: "placeholder",
@@ -195,7 +195,7 @@ const componentPages: Record<string, ComponentPage> = {
 				name: "brand",
 				type: "ReactNode",
 				description:
-					"Brand content rendered on the left — typically a logo or site name string.",
+					"Brand content rendered on the left - typically a logo or site name string.",
 			},
 			{
 				name: "links",
@@ -207,7 +207,7 @@ const componentPages: Record<string, ComponentPage> = {
 				name: "actions",
 				type: "ReactNode",
 				description:
-					"Slot for action elements on the right side — buttons, toggles, or search.",
+					"Slot for action elements on the right side - buttons, toggles, or search.",
 			},
 		],
 		a11y: "Navbar renders inside a <nav> landmark with aria-label for screen readers. Navigation links are rendered as native <a> elements. The sticky positioning keeps the navbar visible without stealing focus. For mobile, ensure a hamburger menu or equivalent pattern is used to expose navigation links.",
@@ -229,13 +229,13 @@ const componentPages: Record<string, ComponentPage> = {
 				name: "credit",
 				type: "ReactNode",
 				description:
-					"Attribution content — typically a copyright notice with the site or company name.",
+					"Attribution content - typically a copyright notice with the site or company name.",
 			},
 			{
 				name: "links",
 				type: "Array<{ href: string; label: string }>",
 				description:
-					"Utility links rendered as anchors — GitHub, license, social profiles, etc.",
+					"Utility links rendered as anchors - GitHub, license, social profiles, etc.",
 			},
 		],
 		a11y: "Footer renders inside a <footer> landmark element which helps screen readers identify the end-of-page navigation. All links are native <a> tags with visible text labels. External links should include rel='noopener noreferrer' for security.",
@@ -260,7 +260,7 @@ const componentPages: Record<string, ComponentPage> = {
 				type: '"success" | "warning" | "neutral"',
 				default: '"success"',
 				description:
-					"Controls the indicator dot color and glow — green for success, amber for warning, muted for neutral.",
+					"Controls the indicator dot color and glow - green for success, amber for warning, muted for neutral.",
 			},
 		],
 		a11y: "The label text communicates the status meaning, so the component does not rely on color alone. The status dot uses aria-hidden since its meaning is conveyed through the label. For dynamic status updates, wrap in a live region (aria-live='polite') so changes are announced to screen readers.",
@@ -308,7 +308,7 @@ const componentPages: Record<string, ComponentPage> = {
 				description: "Controls text alignment for different page layouts.",
 			},
 		],
-		a11y: "The title renders as an <h2> element — ensure it fits your document heading hierarchy. The eyebrow uses aria-hidden since it is decorative context for the title. Actions should use descriptive labels that make sense when read without the surrounding heading.",
+		a11y: "The title renders as an <h2> element - ensure it fits your document heading hierarchy. The eyebrow uses aria-hidden since it is decorative context for the title. Actions should use descriptive labels that make sense when read without the surrounding heading.",
 	},
 	"stat-card": {
 		title: "Stat Card",
@@ -414,7 +414,7 @@ const componentPages: Record<string, ComponentPage> = {
 				description: "Additional CSS classes merged onto the grid container.",
 			},
 		],
-		a11y: "BentoGrid is a purely visual layout component — it does not add any ARIA roles. Content order in the DOM should match the intended reading order since CSS grid can visually reorder items. Ensure child panels maintain a logical sequence for keyboard and screen reader users.",
+		a11y: "BentoGrid is a purely visual layout component - it does not add any ARIA roles. Content order in the DOM should match the intended reading order since CSS grid can visually reorder items. Ensure child panels maintain a logical sequence for keyboard and screen reader users.",
 	},
 	container: {
 		title: "Container",
@@ -432,7 +432,7 @@ const componentPages: Record<string, ComponentPage> = {
 				type: '"sm" | "md" | "lg" | "full"',
 				default: '"lg"',
 				description:
-					"Controls the max-width constraint — sm (48rem), md (64rem), lg (80rem), full (100%).",
+					"Controls the max-width constraint - sm (48rem), md (64rem), lg (80rem), full (100%).",
 			},
 			{
 				name: "className",
@@ -752,7 +752,7 @@ export default async function ComponentPage({
 				<h3 className="docs-section-title">Installation</h3>
 				<p className="text-muted-foreground mb-4 text-sm">
 					Install the package using your preferred package manager. All
-					components are included in a single package — no individual installs
+					components are included in a single package - no individual installs
 					needed.
 				</p>
 				<CommandTabs />

@@ -53,18 +53,18 @@ export async function DocsShell({
 				}
 			/>
 
-			<div className="shell py-8 lg:py-10">
-				<div className="grid gap-10 xl:grid-cols-[220px_minmax(0,1fr)_200px]">
-					<aside className="hidden xl:sticky xl:top-20 xl:block xl:max-h-[calc(100vh-5rem)] xl:self-start">
-						<div className="relative flex max-h-[calc(100vh-5rem)] flex-col overflow-hidden">
-							<div className="sidebar-scroll flex-1 overflow-y-auto pr-2">
+			<div className="shell pb-8 lg:pb-10">
+				<div className="grid gap-10 xl:grid-cols-[240px_minmax(0,1fr)_200px]">
+					<aside className="hidden xl:sticky xl:top-16 xl:block xl:h-[calc(100vh-4rem)] xl:self-start xl:pt-10">
+						<div className="relative flex h-full flex-col overflow-hidden">
+							<div className="sidebar-scroll flex-1 overflow-y-auto pr-4">
 								<DocsSidebar />
 							</div>
 							<div className="sidebar-fade pointer-events-none absolute inset-x-0 bottom-0 h-10" />
 						</div>
 					</aside>
 
-					<main className="min-w-0">
+					<main className="min-w-0 pt-8 lg:pt-10">
 						<div className="mb-8">
 							<SectionHeader
 								eyebrow={eyebrow}
@@ -72,11 +72,15 @@ export async function DocsShell({
 								description={description}
 							/>
 						</div>
-						<div className="border-t border-border pt-8">{children}</div>
+						<div className="pt-8">{children}</div>
 					</main>
 
-					<aside className="hidden xl:sticky xl:top-20 xl:block xl:self-start">
-						<OnThisPage items={toc} />
+					<aside className="hidden xl:sticky xl:top-16 xl:block xl:h-[calc(100vh-4rem)] xl:self-start xl:pt-10">
+						<div className="relative flex h-full flex-col overflow-hidden">
+							<div className="sidebar-scroll flex-1 overflow-y-auto pr-2">
+								<OnThisPage items={toc} />
+							</div>
+						</div>
 					</aside>
 				</div>
 			</div>

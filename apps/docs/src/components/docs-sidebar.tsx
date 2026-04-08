@@ -10,11 +10,11 @@ export function DocsSidebar() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="space-y-8">
+		<nav className="grid grid-flow-row auto-rows-max gap-1 px-1 text-sm">
 			{docsNavigation.map((group) => (
-				<div key={group.title}>
-					<p className="label-eyebrow mb-3">{group.title}</p>
-					<div className="space-y-1">
+				<div key={group.title} className="flex flex-col gap-1">
+					<h4 className="label-eyebrow mt-4 first:mt-0">{group.title}</h4>
+					<div className="grid grid-flow-row auto-rows-max gap-0.5">
 						{group.items.map((item) => {
 							const isActive = pathname === item.href
 
@@ -24,7 +24,7 @@ export function DocsSidebar() {
 									href={item.href}
 									className={cn(
 										"docs-nav-link",
-										isActive ? "text-foreground font-medium" : "font-normal"
+										isActive ? "bg-accent text-accent-foreground" : ""
 									)}
 								>
 									{item.label}

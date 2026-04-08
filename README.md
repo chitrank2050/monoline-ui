@@ -8,7 +8,7 @@ Monoline UI is a modular design-system monorepo built to showcase product-thinki
 - Tailwind CSS v4 for utility styling and token-driven theming
 - shadcn-style component primitives built on Radix Slot and CVA
 - Vitest and Playwright for quality gates
-- Turborepo, pnpm workspaces, Biome, and Changesets for maintainable scale
+- Turborepo, pnpm workspaces, ESLint, Prettier, and Changesets for maintainable scale
 
 ## Workspace
 

@@ -11,18 +11,17 @@ updates:
         update-types:
           - minor
           - patch
-    open-pull-requests-limit: 5
-    reviewers:
-      - chitrank2050
-    labels:
-      - dependencies
-    groups:
       # Groups all production dependencies (stuff in 'dependencies')
       production-dependencies:
         dependency-type: "production"
       # Groups all development dependencies (stuff in 'devDependencies')
       development-dependencies:
         dependency-type: "development"
+    open-pull-requests-limit: 5
+    reviewers:
+      - chitrank2050
+    labels:
+      - dependencies
 
   - package-ecosystem: github-actions
     directory: /
